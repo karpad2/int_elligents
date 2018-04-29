@@ -1,24 +1,26 @@
 <?php
-$link=array("link_style"=>"http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']."style/style.css");
+
 if(empty($title)) $title="";
 $title="".Websitename;
 
 if(empty($content))$content='<div id="content"></div>';
-require "style/head.php";
+require "style/headandfooter.php";
 require "style/banner.php";
-require "style/footer.php";
 
-echo '<!DOCTYPE html>
+echo "<!DOCTYPE html>
 <html>
 <head>
-<!-- Int Elligents v1 -->
-<title>'.$title.'</title>
+<!-- int Elligents v1 -->
+<title>$title</title>
+<!-- Meta -->
+$meta
 <!-- Scripts and Links -->
-<link rel="stylesheet" type="text/css" src="'.$link["link_style"].'">
-</head>';
+$links
+</head>";
 
 echo"
 <body>
+<div class=\"container\">
 <!--Header -->
 $head
 <!--end of Header -->
@@ -31,5 +33,6 @@ $banner
 <!-- Footer -->
 $footer
 <!--end of Footer -->
+</div>
 </body>
 </html>";
